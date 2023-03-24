@@ -1,6 +1,7 @@
 #!/usr/bin/env Rscript
 
 #Convert SCE to h5ad object
+Sys.setenv(RETICULATE_PYTHON="/home/ajordano/software/anaconda3/envs/env1/bin/python3") 
 
 suppressPackageStartupMessages(library("optparse"))
 

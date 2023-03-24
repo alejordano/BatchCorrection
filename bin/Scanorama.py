@@ -44,7 +44,8 @@ def subset_by_batches(dataset):
 	correct_scanorama(dataset_list, cell_metadata)    
 
 def read_h5ad(file):
-	dataset = sc.read(file)	
+	dataset = sc.read(file)
+	dataset.X = scipy.sparse.csr_matrix(dataset.X)
 	subset_by_batches(dataset)
     
 # args
